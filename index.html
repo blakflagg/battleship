@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 
 <html>
-	
 	<head>
 		<title>Battleship</title>
-		
 		<meta charset="UTF-8">
 		<style>
 			body{
 				background-color: black;
 			}
-			
+
 			div#board{
 				position: relative;
 				width: 1024px;
 				height: 863px;
 				margin: auto;
+
 				background: url("images/board.jpg") no-repeat;
 			}
 			div#messageArea{
@@ -23,7 +22,7 @@
 				top:0px;
 				left:0px;
 				color: rgb(83,175,19);
-				
+
 			}
 			table{
 				position: absolute;
@@ -42,7 +41,7 @@
 				right:0px;
 				padding:15px;
 				background-color: rgb(83,175,19);
-				
+
 			}
 			form input{
 				background-color: rgb(152,207,113);
@@ -51,23 +50,23 @@
 			}
 			.hit{
 				background: url("images/ship.png") no-repeat center;
-				
+
 			}
 			.miss{
 				background:url("images/miss.png") no-repeat center;
 			}
-			
+
 		</style>
 	</head>
-	
-	
+
+
 	<body>
-		
-		
+
+
 		<div id="board">
-			
+
 			<div id="messageArea">TEST</div>
-			
+
 			<table>
 				<tr>
 					<td id="00"></td><td id="01"></td><td id="02"></td><td id="03"></td><td id="04"></td><td id="05"></td><td id="06"></td>
@@ -91,17 +90,17 @@
 					<td id="60"></td><td id="61"></td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td><td id="66"></td>
 				</tr>
 			</table>
-			
+
 			<form action="#">
 				<input type="text" id="guessInput" placeholder="A0">
 				<input type="button" id="fireButton" value="Fire!">
 			</form>
-			
+
 		</div>
-		
-		
-		
+
+
+
 	</body>
 	<script src="scripts/battleship.js"></script>
-	
+
 </html>

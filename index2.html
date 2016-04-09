@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Handler</title>
+		<meta charset="UTF-8">
+		
+		<style>
+			img{
+				margin: 20px;
+			}
+			
+			body{
+				margin:20px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = init;
+			
+			function init(){
+				
+				var images = document.getElementsByTagName("img");
+				for(var i =0; i < images.length;i++){
+					images[i].onclick = answer;
+				}
+				
+				
+			};
+			
+			function answer(eventObj){
+				var image = eventObj.target;
+				var name = image.id;
+				name = name + ".jpg"
+				image.src = "images/" + name;
+				
+				setTimeout(reblur,2000,image);
+				
+			};
+			
+			function reblur(image){
+				var name = image.id;
+				name = "images/" + name + "blur.jpg";
+				image.src = name;
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		
+		<img id="zero" src="images/zeroblur.jpg" />
+		 <img id="one" src="images/oneblur.jpg">    
+		 <img id="two" src="images/twoblur.jpg">    
+		 <img id="three" src="images/threeblur.jpg">    
+		 <img id="four" src="images/fourblur.jpg">    
+		 <img id="five" src="images/fiveblur.jpg">
+		
+	</body>
+	
+</html>
